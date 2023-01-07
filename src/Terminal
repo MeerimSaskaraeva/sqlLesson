@@ -1,0 +1,29 @@
+Last login: Sat Jan  7 14:46:05 on ttys002
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+/Library/PostgreSQL/15/scripts/runpsql.sh; exit
+Macs-MacBook-Pro:~ mac$ /Library/PostgreSQL/15/scripts/runpsql.sh; exit
+Server [localhost]: 
+Database [postgres]: 
+Port [5432]: 
+Username [postgres]: postgres
+2202
+Password for user postgres: 
+psql (15.1)
+Type "help" for help.
+
+postgres=# \d
+                List of relations
+ Schema |       Name        |   Type   |  Owner   
+--------+-------------------+----------+----------
+ public | employee          | table    | postgres
+ public | employee_id_seq   | sequence | postgres
+ public | students          | table    | postgres
+ public | students_id_seq   | sequence | postgres
+ public | university        | table    | postgres
+ public | university_id_seq | sequence | postgres
+(6 rows)
+
+postgres=# 
