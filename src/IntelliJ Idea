@@ -1,0 +1,32 @@
+CREATE  TABLE university(
+    id SERIAL PRIMARY KEY ,
+    name VARCHAR
+);
+
+
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50),
+    age INT,
+    email VARCHAR(70) UNIQUE,
+    university_id INT REFERENCES university(id)
+);
+select * from students;
+select * from university;
+
+INSERT INTO university(name)
+VALUES ('Manas'),
+       ('Oxford'),
+       ('Harvard');
+
+INSERT INTO students(first_name, last_name, age, email, university_id)
+VALUES('Asel','Urakunova',28,'u@gmail.com',1),
+      ('Marat','Mamytov',38,'m@gmail.com',2),
+      ('Bek','Asanov',18,'b@gmail.com',3),
+      ('Nurlan','Kemelov',24,'n@gmail.com',1);
+
+ALTER TABLE  students ADD phone_number VARCHAR;
+
+ALTER  TABLE students ADD CONSTRAINT phone_number UNIQUE (phone_number);
+
