@@ -1,0 +1,4 @@
+CREATE TABLE university(
+	id SERIAL,
+	name VARCHAR,
+	country VARCHAR);
